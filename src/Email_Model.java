@@ -67,7 +67,7 @@ public class Email_Model {
     }
 
     private String setEmail (){
-        return   firstName+"."+lastName+"@"+department+"."+companyPrefix+".com";
+        return   firstName.replaceAll(" ","")+"."+lastName.replaceAll(" ","")+"@"+department+"."+companyPrefix.replaceAll(" ","")+".com";
     }
     public void information(){
         System.out.println("Hello "+firstName);
